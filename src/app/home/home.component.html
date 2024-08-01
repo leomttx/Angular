@@ -1,0 +1,21 @@
+<div routerLink="/">
+    <h1>Pagina Home</h1>
+    <section style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h2>Indo para Contac usando Navegação Programática</h2>
+        <button (click)="irParaContact()" style="width: 70px;">
+            Ir para Contato
+        </button>
+    </section>
+    <section>
+        <h2>Usando Roteamento Com Parametros</h2>
+        <li><a [routerLink]="['/item', 1]"> Item 1 </a></li>
+        <li><a [routerLink]="['/item', 2]"> Item 2 </a></li>
+        <li><a [routerLink]="['/item', 3]"> Item 3 </a></li>
+    </section>
+    <section>
+        <h2>Usando Roteamento Com Query Params</h2>
+        <li><a [routerLink]="['/search']" [queryParams]="{query: 'Angular', page: 1}"> Angular </a></li>
+        <li><a [routerLink]="['/search']" [queryParams]="{query: 'React', page: 2}"> React </a></li>
+        <li><a [routerLink]="['/search']" [queryParams]="{query: 'Vue', page: 3}"> Vue </a></li>
+    </section>
+</div>
